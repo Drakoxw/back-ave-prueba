@@ -1,12 +1,12 @@
 ### Borrar cache
 GET /prueba-ave-back/public/api/clear-cache HTTP/1.1
-Host: cifrado.com.co
+Host: localhost
 
 
 ### Autenticacion
 POST /prueba-ave-back/public/api/auth HTTP/1.1
 Content-Type: application/json
-Host: cifrado.com.co
+Host: localhost
 Content-Length: 47
 {
 	"user": "root",
@@ -17,7 +17,7 @@ Content-Length: 47
 POST /prueba-ave-back/public/api/register?= HTTP/1.1
 Content-Type: application/json
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJleHAiOjE2OTExNzM0OTIsImF1ZCI6ImZkZGY5YjU5NzNiMTI4ZjkzMWEzZmQyMTlmNjllMDgyIiwidXNlciI6InJvb3QiLCJkcyI6InVzZXIgcm9vdCIsImlkIjoxLCJyb2wiOiJTdXBlckFkbWluIn0.Vd7ZBIpXfP08aCjpLwMR0d_A9ddm3pZKjxB0tNAYbg9N7PYIg6zQ5FWL8oeH8ZV7uhOFDol5e0SYej1Xv8QKheb_WAMjaVgr7kjHp9wss4H-dB79iS32kpiWIIc8x6_a4An1U-6pDKdN0_kLy3hfZsIi5OQLhaUwgpBpOyXFFBA
-Host: cifrado.com.co
+Host: localhost
 Content-Length: 74
 
 {
@@ -30,7 +30,7 @@ Content-Length: 74
 ### Auto registro de cliente
 POST /prueba-ave-back/public/api/register?= HTTP/1.1
 Content-Type: application/json
-Host: cifrado.com.co
+Host: localhost
 Content-Length: 155
 
 {
@@ -45,18 +45,18 @@ Content-Length: 155
 ### Listar todos los clientes
 GET /prueba-ave-back/public/api/client?= HTTP/1.1
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJleHAiOjE2OTExNzM0OTIsImF1ZCI6ImZkZGY5YjU5NzNiMTI4ZjkzMWEzZmQyMTlmNjllMDgyIiwidXNlciI6InJvb3QiLCJkcyI6InVzZXIgcm9vdCIsImlkIjoxLCJyb2wiOiJTdXBlckFkbWluIn0.Vd7ZBIpXfP08aCjpLwMR0d_A9ddm3pZKjxB0tNAYbg9N7PYIg6zQ5FWL8oeH8ZV7uhOFDol5e0SYej1Xv8QKheb_WAMjaVgr7kjHp9wss4H-dB79iS32kpiWIIc8x6_a4An1U-6pDKdN0_kLy3hfZsIi5OQLhaUwgpBpOyXFFBA
-Host: cifrado.com.co
+Host: localhost
 
 ### Buscar un cliente por id
 GET /prueba-ave-back/public/api/client/5?= HTTP/1.1
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJleHAiOjE2OTExNzM0OTIsImF1ZCI6ImZkZGY5YjU5NzNiMTI4ZjkzMWEzZmQyMTlmNjllMDgyIiwidXNlciI6InJvb3QiLCJkcyI6InVzZXIgcm9vdCIsImlkIjoxLCJyb2wiOiJTdXBlckFkbWluIn0.Vd7ZBIpXfP08aCjpLwMR0d_A9ddm3pZKjxB0tNAYbg9N7PYIg6zQ5FWL8oeH8ZV7uhOFDol5e0SYej1Xv8QKheb_WAMjaVgr7kjHp9wss4H-dB79iS32kpiWIIc8x6_a4An1U-6pDKdN0_kLy3hfZsIi5OQLhaUwgpBpOyXFFBA
-Host: cifrado.com.co
+Host: localhost
 
 ### Registrar cliente
 POST /prueba-ave-back/public/api/client/create?= HTTP/1.1
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJleHAiOjE2OTExNzM0OTIsImF1ZCI6ImZkZGY5YjU5NzNiMTI4ZjkzMWEzZmQyMTlmNjllMDgyIiwidXNlciI6InJvb3QiLCJkcyI6InVzZXIgcm9vdCIsImlkIjoxLCJyb2wiOiJTdXBlckFkbWluIn0.Vd7ZBIpXfP08aCjpLwMR0d_A9ddm3pZKjxB0tNAYbg9N7PYIg6zQ5FWL8oeH8ZV7uhOFDol5e0SYej1Xv8QKheb_WAMjaVgr7kjHp9wss4H-dB79iS32kpiWIIc8x6_a4An1U-6pDKdN0_kLy3hfZsIi5OQLhaUwgpBpOyXFFBA
 Content-Type: application/json
-Host: cifrado.com.co
+Host: localhost
 Content-Length: 155
 
 {
@@ -72,7 +72,7 @@ Content-Length: 155
 PATCH /prueba-ave-back/public/api/client/update/5?= HTTP/1.1
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJleHAiOjE2OTExNzM0OTIsImF1ZCI6ImZkZGY5YjU5NzNiMTI4ZjkzMWEzZmQyMTlmNjllMDgyIiwidXNlciI6InJvb3QiLCJkcyI6InVzZXIgcm9vdCIsImlkIjoxLCJyb2wiOiJTdXBlckFkbWluIn0.Vd7ZBIpXfP08aCjpLwMR0d_A9ddm3pZKjxB0tNAYbg9N7PYIg6zQ5FWL8oeH8ZV7uhOFDol5e0SYej1Xv8QKheb_WAMjaVgr7kjHp9wss4H-dB79iS32kpiWIIc8x6_a4An1U-6pDKdN0_kLy3hfZsIi5OQLhaUwgpBpOyXFFBA
 Content-Type: application/json
-Host: cifrado.com.co
+Host: localhost
 Content-Length: 56
 
 {
@@ -84,4 +84,4 @@ Content-Length: 56
 ### Eliminacion lógica de cliente
 DELETE /prueba-ave-back/public/api/client/delete/5?= HTTP/1.1
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJleHAiOjE2OTExNzM0OTIsImF1ZCI6ImZkZGY5YjU5NzNiMTI4ZjkzMWEzZmQyMTlmNjllMDgyIiwidXNlciI6InJvb3QiLCJkcyI6InVzZXIgcm9vdCIsImlkIjoxLCJyb2wiOiJTdXBlckFkbWluIn0.Vd7ZBIpXfP08aCjpLwMR0d_A9ddm3pZKjxB0tNAYbg9N7PYIg6zQ5FWL8oeH8ZV7uhOFDol5e0SYej1Xv8QKheb_WAMjaVgr7kjHp9wss4H-dB79iS32kpiWIIc8x6_a4An1U-6pDKdN0_kLy3hfZsIi5OQLhaUwgpBpOyXFFBA
-Host: cifrado.com.co
+Host: localhost
