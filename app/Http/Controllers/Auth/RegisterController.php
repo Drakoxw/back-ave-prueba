@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use App\Tools\AuthJwt;
 use App\Tools\Crypter;
+use App\Models\Cliente;
 use Illuminate\Http\Request;
 use App\Services\Validations;
-use App\Http\Controllers\ControllerExt;
 use Illuminate\Http\Response;
+use App\Http\Controllers\ControllerExt;
 
 class RegisterController extends ControllerExt
 {
@@ -17,20 +19,27 @@ class RegisterController extends ControllerExt
     public function __invoke(Request $request)
     {
         try {
-            Validations::UserRegister($request);
+            Validations::ClientRegister($request);
 
-            $user = new User;
-            $user->user = $request->input('user');
-            $user->password = Crypter::encryptAES($request->input('password'));
-            $user->name = $request->input('name');
-            $user->rol = 'User';
-            $user->save();
+            $id = Cliente::CrearCliente($request);
+
+            $cliente = Cliente::find($id);
+
+            $data = [
+                'user'=> $cliente->user,
+                'ds'  => $cliente->name,
+                'id'  => $cliente->id,
+                'rol' => $cliente->rol
+            ];
+
+            $token = AuthJwt::SignInTokenSimple($data, 9000);
 
             return $this->responseOk(
-                ['user' => $request->input('user')],
-                'Usuario creado correctamente',
+                ['id' => $id, 'token' => $token],
+                'Creado exitosamente.',
                 Response::HTTP_CREATED
             );
+
 
         } catch (\Exception $e) {
             return $this->badResponse($e);

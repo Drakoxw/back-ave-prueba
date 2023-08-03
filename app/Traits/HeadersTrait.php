@@ -48,16 +48,7 @@ trait HeadersTrait
     {
         $auth = $this->Authorization($request);
 
-        $nelsonId = 234;
-        $paulaId = 43;
-
-        $usersIdsAuthorized = [ $nelsonId, $paulaId ];
-
-        if ($auth->isAdminAuthorized) {
-            return;
-        }
-
-        if (!in_array($auth->idUser, $usersIdsAuthorized)) {
+        if (!in_array($auth['rol'], ['Admin', 'SuperAdmin'])) {
             throw new \Exception('No se le permite esta acción', Response::HTTP_FORBIDDEN);
         }
     }

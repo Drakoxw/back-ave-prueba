@@ -19,7 +19,7 @@ class RegisterUserAdminController extends ControllerExt
     {
         try {
             $token = $this->Authorization();
-            if ($token['rol'] != 'Admin' || $token['rol'] != 'SuperAdmin') {
+            if ($token['rol'] != 'SuperAdmin') {
                 throw new \Exception('No tienes permisos para realizar esta acción', Response::HTTP_UNAUTHORIZED);
             }
 

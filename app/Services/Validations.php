@@ -41,4 +41,24 @@ class Validations
     ]);
   }
 
+  public static function ClientRegister(Request $request): \Illuminate\Validation\Validator
+  {
+    return self::makeValidator($request, [
+        'name'     => ['required', 'string', 'max:255', 'min:4'],
+        'lastname' => ['required', 'string', 'max:255', 'min:4'],
+        'document' => ['required', 'string', 'max:255', 'min:4'],
+        'email'    => ['required', 'email'],
+        'user'     => ['required', 'string', 'max:255', 'min:4'],
+        'password' => ['required', 'string', 'max:80', 'min:8'],
+    ]);
+  }
+
+  public static function ClientUpdate(Request $request): \Illuminate\Validation\Validator
+  {
+    return self::makeValidator($request, [
+        'name'     => ['required', 'string', 'max:255', 'min:4'],
+        'lastname' => ['required', 'string', 'max:255', 'min:4'],
+    ]);
+  }
+
 }
