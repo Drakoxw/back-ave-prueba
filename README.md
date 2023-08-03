@@ -1,5 +1,8 @@
 # PRUEBA TECNICA AVE
 
+## Ruta de despliegue
+> https://cifrado.com.co/prueba-ave-back/public/api/
+
 > Requiere `PHP 8.1` superior
 
 * Una vez descargado el archivo, instalar dependencias:
