@@ -11,18 +11,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('cliente', function (Blueprint $table) {
             $table->id();
-            $table->string('user', 100)->unique();
-            $table->string('password', 255);
             $table->string('name', 100);
-            $table->string('rol', 50);
+            $table->string('lastname', 150);
+            $table->string('document')->unique();
+            $table->string('email')->unique();
+            $table->string('user')->unique();
+            $table->string('password', 255);
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('clientes');
     }
 };

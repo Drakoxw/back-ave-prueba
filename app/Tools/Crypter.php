@@ -4,9 +4,9 @@ namespace App\Tools;
 
 class Crypter
 {
-    private static $secret_key = 'IGfMA0GCSqGndsjs22shdhsdKBg';
+    private static $secret_key = 'IGfMGndsjs22sA0GCSqhdhsdKBg';
 
-    private static $secret_iv = '1234567890123465';
+    private static $secret_iv = '8901234651234567';
 
     private static $method = 'AES-256-CBC';
 
