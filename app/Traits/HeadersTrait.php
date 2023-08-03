@@ -2,10 +2,11 @@
 
 namespace App\Traits;
 
+use Exception;
+use App\Tools\AuthJwt;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Classes\Entities\AuthorizationEntity;
-use Exception;
 use Psr\Container\NotFoundExceptionInterface;
 use Psr\Container\ContainerExceptionInterface;
 
@@ -38,8 +39,8 @@ trait HeadersTrait
         }
 
         $this->token = $token;
-
-        return $token;
+        $dataToken = (array)AuthJwt::GetDataSimple($token);
+        return $dataToken;
     }
 
     /** VALIDA A SOLO LOS DE ROL `Admin` O LOS IDS QUE SE CONSIDEREN COMO ADMINISTRADORES PARA LA API */
